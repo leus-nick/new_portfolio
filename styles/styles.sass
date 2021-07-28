@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Oswald&display=swap')
 
+// FONTS
 $main-font: 'Open Sans', sans-serif
 $percentage-font: 'Oswald', sans-serif
 
+// COLORS
 $main_text_color: #626262
 $secondary_text_color: #989898
 $tertiary_text_colo: #CFCFCF
@@ -10,5 +12,96 @@ $quaternary_text_color: #E5E5E5
 $social_color: #F4F4F4
 $footer_color: #252525
 
+// GENERAL
 html, body
     height: 100vh
+
+// HEADER
+header
+    height: 100vh
+    display: flex
+    flex-direction: column
+
+    nav
+        min-height: 50px
+        display: flex
+        justify-content: center
+
+        ul
+            list-style-type: none
+            margin: 0
+            padding: 0
+            display: flex
+            align-items: center
+
+            li
+                margin: 0 20px
+            
+                .nav__item
+                    color: #000000
+                    font-family: $main-font
+                    font-weight: 600
+                    font-size: 11px
+                    line-height: 23px
+                    letter-spacing: 1px
+                    text-decoration: none
+                    text-transform: uppercase
+                    padding: 5px 0
+                    transition: all 0.1s ease-in-out
+
+                .nav__item_active, 
+                .nav__item:hover
+                    border-bottom: 2px solid #000000
+
+            li:first-child
+                margin-left: 0
+
+            li:last-child
+                margin-right: 0
+
+    .title
+        flex: 1
+        background-position: top center
+        background-repeat: no-repeat
+        background-size: cover
+        background-color: $secondary_text_color
+        background-image: url('../img/header_bg.jpg')
+        background-blend-mode: screen
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        .hello
+            margin: 20px
+            color: #000000
+            font-family: $main-font
+            font-weight: 700
+            font-size: 45px
+            line-height: 50px
+            letter-spacing: 3px
+            text-transform: uppercase
+
+        .me_text
+            margin: 0
+            color: #000000
+            font-family: $main-font
+            font-weight: 400
+            font-size: 15px
+            line-height: 24px
+            letter-spacing: 2px
+            text-transform: uppercase
+
+// Section "ABOUT"
+
+// Section "SKILLS"
+
+// Section "PROGRESS"
+
+// Section "PORTFOLIO"
+
+// Section "QUOTE"
+
+// Section "CONTACT"
+
+// FOOTER
