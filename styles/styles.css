@@ -3,7 +3,7 @@ html, body {
   height: 100vh;
 }
 
-header {
+html header, body header {
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +14,7 @@ header {
           flex-direction: column;
 }
 
-header nav {
+html header nav, body header nav {
   min-height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,9 +22,12 @@ header nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-header nav ul {
+html header nav ul, body header nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -36,11 +39,11 @@ header nav ul {
           align-items: center;
 }
 
-header nav ul li {
+html header nav ul li, body header nav ul li {
   margin: 0 20px;
 }
 
-header nav ul li .nav__item {
+html header nav ul li .nav__item, body header nav ul li .nav__item {
   color: #000000;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -54,29 +57,24 @@ header nav ul li .nav__item {
   transition: all 0.1s ease-in-out;
 }
 
-header nav ul li .nav__item_active,
-header nav ul li .nav__item:hover {
+html header nav ul li .nav__item_active,
+html header nav ul li .nav__item:hover, body header nav ul li .nav__item_active,
+body header nav ul li .nav__item:hover {
   border-bottom: 2px solid #000000;
 }
 
-header nav ul li:first-child {
+html header nav ul li:first-child, body header nav ul li:first-child {
   margin-left: 0;
 }
 
-header nav ul li:last-child {
+html header nav ul li:last-child, body header nav ul li:last-child {
   margin-right: 0;
 }
 
-header .title {
+html header .title, body header .title {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #989898;
-  background-image: url("../img/header_bg.jpg");
-  background-blend-mode: screen;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,9 +88,15 @@ header .title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #989898;
+  background-image: url("../img/header_bg.jpg");
+  background-blend-mode: screen;
 }
 
-header .title .hello {
+html header .title .hello h1, body header .title .hello h1 {
   margin: 20px;
   color: #000000;
   font-family: "Open Sans", sans-serif;
@@ -103,7 +107,7 @@ header .title .hello {
   text-transform: uppercase;
 }
 
-header .title .me_text {
+html header .title .me_text p, body header .title .me_text p {
   margin: 0;
   color: #000000;
   font-family: "Open Sans", sans-serif;
@@ -112,5 +116,206 @@ header .title .me_text {
   line-height: 24px;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+html section, body section {
+  padding-top: 100px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+html section .section__wrapper, body section .section__wrapper {
+  max-width: 1280px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html section .section__wrapper .section__number span, body section .section__wrapper .section__number span {
+  display: block;
+  margin-bottom: 25px;
+  color: #CFCFCF;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: 55px;
+  line-height: 23px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+html section .section__wrapper .section__title h2, body section .section__wrapper .section__title h2 {
+  margin: 0;
+  color: #000000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+html section .section__wrapper .section__content, body section .section__wrapper .section__content {
+  margin-top: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html section .section__wrapper .section__content .about__image, body section .section__wrapper .section__content .about__image {
+  min-height: 600px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #989898;
+  background-image: url("../img/header_bg.jpg");
+}
+
+html section .section__wrapper .section__content .about__info, body section .section__wrapper .section__content .about__info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 50px;
+}
+
+html section .section__wrapper .section__content .about__info .about__text p, body section .section__wrapper .section__content .about__info .about__text p {
+  margin: 0;
+  color: #000000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+html section .section__wrapper .section__content .about__info .about__grid, body section .section__wrapper .section__content .about__info .about__grid {
+  margin: 50px 0;
+}
+
+html section .section__wrapper .section__content .about__info .about__grid ul, body section .section__wrapper .section__content .about__info .about__grid ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+html section .section__wrapper .section__content .about__info .about__grid .grid__item, body section .section__wrapper .section__content .about__info .about__grid .grid__item {
+  color: #626262;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 10px 0;
+}
+
+html section .section__wrapper .section__content .about__info .about__grid .grid__title, body section .section__wrapper .section__content .about__info .about__grid .grid__title {
+  display: inline-block;
+  min-width: 150px;
+  font-weight: 600;
+}
+
+html section .section__wrapper .section__content .about__info .about__button button, body section .section__wrapper .section__content .about__info .about__button button {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 2px solid #000000;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+html section .section__wrapper .section__content .about__info .about__button button:hover, body section .section__wrapper .section__content .about__info .about__button button:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+html .skills, body .skills {
+  padding-bottom: 120px;
+}
+
+html .skills .section__wrapper .section__content, body .skills .section__wrapper .section__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  row-gap: 50px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+html .skills .section__wrapper .section__content .skill__wrapper, body .skills .section__wrapper .section__content .skill__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html .skills .section__wrapper .section__content .skill__wrapper .skill__image, body .skills .section__wrapper .section__content .skill__wrapper .skill__image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #989898;
+  background-image: url("https://via.placeholder.com/150");
+}
+
+html .skills .section__wrapper .section__content .skill__wrapper .skill, body .skills .section__wrapper .section__content .skill__wrapper .skill {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+html .skills .section__wrapper .section__content .skill__wrapper .skill .skill__title, body .skills .section__wrapper .section__content .skill__wrapper .skill .skill__title {
+  padding-left: 25px;
+}
+
+html .skills .section__wrapper .section__content .skill__wrapper .skill .skill__title h3, body .skills .section__wrapper .section__content .skill__wrapper .skill .skill__title h3 {
+  color: #000000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+html .skills .section__wrapper .section__content .skill__wrapper .skill .skill__description, body .skills .section__wrapper .section__content .skill__wrapper .skill .skill__description {
+  padding-left: 25px;
+}
+
+html .skills .section__wrapper .section__content .skill__wrapper .skill .skill__description p, body .skills .section__wrapper .section__content .skill__wrapper .skill .skill__description p {
+  color: #626262;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.3px;
 }
 /*# sourceMappingURL=styles.css.map */

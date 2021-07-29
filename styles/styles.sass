@@ -7,7 +7,7 @@ $percentage-font: 'Oswald', sans-serif
 // COLORS
 $main_text_color: #626262
 $secondary_text_color: #989898
-$tertiary_text_colo: #CFCFCF
+$tertiary_text_color: #CFCFCF
 $quaternary_text_color: #E5E5E5
 $social_color: #F4F4F4
 $footer_color: #252525
@@ -16,92 +16,243 @@ $footer_color: #252525
 html, body
     height: 100vh
 
-// HEADER
-header
-    height: 100vh
-    display: flex
-    flex-direction: column
-
-    nav
-        min-height: 50px
-        display: flex
-        justify-content: center
-
-        ul
-            list-style-type: none
-            margin: 0
-            padding: 0
-            display: flex
-            align-items: center
-
-            li
-                margin: 0 20px
-            
-                .nav__item
-                    color: #000000
-                    font-family: $main-font
-                    font-weight: 600
-                    font-size: 11px
-                    line-height: 23px
-                    letter-spacing: 1px
-                    text-decoration: none
-                    text-transform: uppercase
-                    padding: 5px 0
-                    transition: all 0.1s ease-in-out
-
-                .nav__item_active, 
-                .nav__item:hover
-                    border-bottom: 2px solid #000000
-
-            li:first-child
-                margin-left: 0
-
-            li:last-child
-                margin-right: 0
-
-    .title
-        flex: 1
-        background-position: top center
-        background-repeat: no-repeat
-        background-size: cover
-        background-color: $secondary_text_color
-        background-image: url('../img/header_bg.jpg')
-        background-blend-mode: screen
+    // HEADER
+    header
+        height: 100vh
         display: flex
         flex-direction: column
-        justify-content: center
-        align-items: center
 
-        .hello
-            margin: 20px
-            color: #000000
-            font-family: $main-font
-            font-weight: 700
-            font-size: 45px
-            line-height: 50px
-            letter-spacing: 3px
-            text-transform: uppercase
+        nav
+            min-height: 50px
+            display: flex
+            justify-content: center
+            position: fixed
+            top: 0
+            width: 100%
 
-        .me_text
-            margin: 0
-            color: #000000
-            font-family: $main-font
-            font-weight: 400
-            font-size: 15px
-            line-height: 24px
-            letter-spacing: 2px
-            text-transform: uppercase
+            ul
+                list-style-type: none
+                margin: 0
+                padding: 0
+                display: flex
+                align-items: center
 
-// Section "ABOUT"
+                li
+                    margin: 0 20px
+                
+                    .nav__item
+                        color: #000000
+                        font-family: $main-font
+                        font-weight: 600
+                        font-size: 11px
+                        line-height: 23px
+                        letter-spacing: 1px
+                        text-decoration: none
+                        text-transform: uppercase
+                        padding: 5px 0
+                        transition: all 0.1s ease-in-out
 
-// Section "SKILLS"
+                    .nav__item_active, 
+                    .nav__item:hover
+                        border-bottom: 2px solid #000000
 
-// Section "PROGRESS"
+                li:first-child
+                    margin-left: 0
 
-// Section "PORTFOLIO"
+                li:last-child
+                    margin-right: 0
 
-// Section "QUOTE"
+        .title
+            flex: 1
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            background-position: top center
+            background-repeat: no-repeat
+            background-size: cover
+            background-color: $secondary_text_color
+            background-image: url('../img/header_bg.jpg')
+            background-blend-mode: screen
 
-// Section "CONTACT"
+            .hello h1
+                margin: 20px
+                color: #000000
+                font-family: $main-font
+                font-weight: 700
+                font-size: 45px
+                line-height: 50px
+                letter-spacing: 3px
+                text-transform: uppercase
 
-// FOOTER
+            .me_text p
+                margin: 0
+                color: #000000
+                font-family: $main-font
+                font-weight: 400
+                font-size: 15px
+                line-height: 24px
+                letter-spacing: 2px
+                text-transform: uppercase
+
+    // Section "ABOUT"
+    section
+        padding-top: 100px
+        border-bottom: 1px solid $quaternary_text_color
+
+        .section__wrapper
+            max-width: 1280px
+            margin: auto
+            display: flex
+            flex-direction: column
+            align-items: center
+        
+            .section__number span
+                display: block
+                margin-bottom: 25px
+                color: $tertiary_text_color
+                font-family: $main-font
+                font-weight: 100
+                font-size: 55px
+                line-height: 23px
+                letter-spacing: -2px
+                text-transform: uppercase
+
+            .section__title h2
+                margin: 0
+                color: #000000
+                font-family: $main-font
+                font-weight: 700
+                font-size: 20px
+                line-height: 22px
+                letter-spacing: 2px
+                text-transform: uppercase
+
+            .section__content
+                margin-top: 120px
+                display: flex
+
+                .about__image
+                    min-height: 600px
+                    flex: 1
+                    background-position: center center
+                    background-repeat: no-repeat
+                    background-size: cover
+                    background-color: $secondary_text_color
+                    background-image: url('../img/header_bg.jpg')
+
+                .about__info
+                    flex: 1
+                    display: flex
+                    flex-direction: column
+                    padding: 0 50px
+
+                    .about__text p
+                        margin: 0
+                        color: #000000
+                        font-family: $main-font
+                        font-weight: 400
+                        font-size: 15px
+                        line-height: 24px
+                        letter-spacing: 2px
+                        text-transform: uppercase
+
+                    .about__grid
+                        margin: 50px 0
+
+                        ul
+                            margin: 0
+                            padding: 0
+                            list-style-type: none
+
+                        .grid__item
+                            color: $main_text_color
+                            font-family: $main-font
+                            font-weight: 400
+                            font-size: 14px
+                            line-height: 26px
+                            letter-spacing: 0.3px
+                            border-bottom: 1px solid $quaternary_text_color
+                            padding: 10px 0
+
+                        .grid__title
+                            display: inline-block
+                            min-width: 150px
+                            font-weight: 600
+
+                    .about__button button
+                        background-color: #000000
+                        color: #FFFFFF
+                        font-family: $main-font
+                        font-weight: 600
+                        font-size: 14px
+                        line-height: 23px
+                        letter-spacing: 2px
+                        text-transform: uppercase
+                        border: 2px solid #000000
+                        padding: 10px 20px
+                        cursor: pointer
+                        transition: all 0.2s ease-in-out
+
+                    .about__button button:hover
+                        background-color: #FFFFFF
+                        color: #000000
+                    
+    // Section "SKILLS"
+    .skills 
+        padding-bottom: 120px
+        
+        .section__wrapper
+            .section__content
+                display: grid
+                grid-template-columns: repeat(3, 1fr)
+                grid-template-rows: repeat(2, auto)
+                row-gap: 50px
+                column-gap: 20px
+
+                .skill__wrapper
+                    display: flex
+
+                    .skill__image
+                        flex: 1
+                        background-position: center center
+                        background-repeat: no-repeat
+                        background-size: cover
+                        background-color: $secondary_text_color
+                        background-image: url('https://via.placeholder.com/150')
+                        
+                    .skill
+                        flex: 2
+
+                        .skill__title 
+                            padding-left: 25px
+
+                            h3
+                                color: #000000
+                                font-family: $main-font
+                                font-weight: 600
+                                font-size: 11px
+                                line-height: 12px
+                                letter-spacing: 2px
+                                text-transform: uppercase
+
+                        .skill__description 
+                            padding-left: 25px
+
+                            p
+                                color: $main_text_color
+                                font-family: $main-font
+                                font-weight: 400
+                                font-size: 13px
+                                line-height: 23px
+                                letter-spacing: 0.3px
+
+    // Section "PROGRESS"
+
+    // Section "PORTFOLIO"
+
+    // Section "QUOTE"
+
+    // Section "CONTACT"
+
+    // FOOTER
