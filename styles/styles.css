@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Oswald&display=swap");
 html, body {
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
-html header, body header {
+header {
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,8 +15,8 @@ html header, body header {
           flex-direction: column;
 }
 
-html header nav, body header nav {
-  min-height: 50px;
+header nav {
+  min-height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,9 +26,11 @@ html header nav, body header nav {
   position: fixed;
   top: 0;
   width: 100%;
+  -webkit-transition: background-color .2s ease-in-out, min-height .2s ease-in-out;
+  transition: background-color .2s ease-in-out, min-height .2s ease-in-out;
 }
 
-html header nav ul, body header nav ul {
+header nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -39,11 +42,11 @@ html header nav ul, body header nav ul {
           align-items: center;
 }
 
-html header nav ul li, body header nav ul li {
+header nav ul li {
   margin: 0 20px;
 }
 
-html header nav ul li .nav__item, body header nav ul li .nav__item {
+header nav ul li .nav__item {
   color: #000000;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -57,21 +60,26 @@ html header nav ul li .nav__item, body header nav ul li .nav__item {
   transition: all 0.1s ease-in-out;
 }
 
-html header nav ul li .nav__item_active,
-html header nav ul li .nav__item:hover, body header nav ul li .nav__item_active,
-body header nav ul li .nav__item:hover {
+header nav ul li .nav__item_active,
+header nav ul li .nav__item:hover {
   border-bottom: 2px solid #000000;
 }
 
-html header nav ul li:first-child, body header nav ul li:first-child {
+header nav ul li:first-child {
   margin-left: 0;
 }
 
-html header nav ul li:last-child, body header nav ul li:last-child {
+header nav ul li:last-child {
   margin-right: 0;
 }
 
-html header .title, body header .title {
+header .filled {
+  min-height: 50px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+header .title {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -96,7 +104,7 @@ html header .title, body header .title {
   background-blend-mode: screen;
 }
 
-html header .title .hello h1, body header .title .hello h1 {
+header .title .hello h1 {
   margin: 20px;
   color: #000000;
   font-family: "Open Sans", sans-serif;
@@ -107,7 +115,7 @@ html header .title .hello h1, body header .title .hello h1 {
   text-transform: uppercase;
 }
 
-html header .title .me_text p, body header .title .me_text p {
+header .title .me_text p {
   margin: 0;
   color: #000000;
   font-family: "Open Sans", sans-serif;
@@ -118,12 +126,12 @@ html header .title .me_text p, body header .title .me_text p {
   text-transform: uppercase;
 }
 
-html section, body section {
+section {
   padding-top: 100px;
   border-bottom: 1px solid #E5E5E5;
 }
 
-html section .section__wrapper, body section .section__wrapper {
+section .section__wrapper {
   max-width: 1280px;
   margin: auto;
   display: -webkit-box;
@@ -138,7 +146,7 @@ html section .section__wrapper, body section .section__wrapper {
           align-items: center;
 }
 
-html section .section__wrapper .section__number span, body section .section__wrapper .section__number span {
+section .section__wrapper .section__number span {
   display: block;
   margin-bottom: 25px;
   color: #CFCFCF;
@@ -150,7 +158,7 @@ html section .section__wrapper .section__number span, body section .section__wra
   text-transform: uppercase;
 }
 
-html section .section__wrapper .section__title h2, body section .section__wrapper .section__title h2 {
+section .section__wrapper .section__title h2 {
   margin: 0;
   color: #000000;
   font-family: "Open Sans", sans-serif;
@@ -161,14 +169,14 @@ html section .section__wrapper .section__title h2, body section .section__wrappe
   text-transform: uppercase;
 }
 
-html section .section__wrapper .section__content, body section .section__wrapper .section__content {
+section .section__wrapper .section__content {
   margin-top: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-html section .section__wrapper .section__content .about__image, body section .section__wrapper .section__content .about__image {
+section .section__wrapper .section__content .about__image {
   min-height: 600px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -180,7 +188,7 @@ html section .section__wrapper .section__content .about__image, body section .se
   background-image: url("../img/header_bg.jpg");
 }
 
-html section .section__wrapper .section__content .about__info, body section .section__wrapper .section__content .about__info {
+section .section__wrapper .section__content .about__info {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -194,7 +202,7 @@ html section .section__wrapper .section__content .about__info, body section .sec
   padding: 0 50px;
 }
 
-html section .section__wrapper .section__content .about__info .about__text p, body section .section__wrapper .section__content .about__info .about__text p {
+section .section__wrapper .section__content .about__info .about__text p {
   margin: 0;
   color: #000000;
   font-family: "Open Sans", sans-serif;
@@ -205,17 +213,17 @@ html section .section__wrapper .section__content .about__info .about__text p, bo
   text-transform: uppercase;
 }
 
-html section .section__wrapper .section__content .about__info .about__grid, body section .section__wrapper .section__content .about__info .about__grid {
+section .section__wrapper .section__content .about__info .about__grid {
   margin: 50px 0;
 }
 
-html section .section__wrapper .section__content .about__info .about__grid ul, body section .section__wrapper .section__content .about__info .about__grid ul {
+section .section__wrapper .section__content .about__info .about__grid ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-html section .section__wrapper .section__content .about__info .about__grid .grid__item, body section .section__wrapper .section__content .about__info .about__grid .grid__item {
+section .section__wrapper .section__content .about__info .about__grid .grid__item {
   color: #626262;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -226,13 +234,13 @@ html section .section__wrapper .section__content .about__info .about__grid .grid
   padding: 10px 0;
 }
 
-html section .section__wrapper .section__content .about__info .about__grid .grid__title, body section .section__wrapper .section__content .about__info .about__grid .grid__title {
+section .section__wrapper .section__content .about__info .about__grid .grid__title {
   display: inline-block;
   min-width: 150px;
   font-weight: 600;
 }
 
-html section .section__wrapper .section__content .about__info .about__button button, body section .section__wrapper .section__content .about__info .about__button button {
+section .section__wrapper .section__content .about__info .about__button button {
   background-color: #000000;
   color: #FFFFFF;
   font-family: "Open Sans", sans-serif;
@@ -248,16 +256,16 @@ html section .section__wrapper .section__content .about__info .about__button but
   transition: all 0.2s ease-in-out;
 }
 
-html section .section__wrapper .section__content .about__info .about__button button:hover, body section .section__wrapper .section__content .about__info .about__button button:hover {
+section .section__wrapper .section__content .about__info .about__button button:hover {
   background-color: #FFFFFF;
   color: #000000;
 }
 
-html .skills, body .skills {
+.skills {
   padding-bottom: 120px;
 }
 
-html .skills .section__wrapper .section__content, body .skills .section__wrapper .section__content {
+.skills .section__wrapper .section__content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -269,34 +277,53 @@ html .skills .section__wrapper .section__content, body .skills .section__wrapper
           column-gap: 20px;
 }
 
-html .skills .section__wrapper .section__content .skill__wrapper, body .skills .section__wrapper .section__content .skill__wrapper {
+.skills .section__wrapper .section__content .skill__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-html .skills .section__wrapper .section__content .skill__wrapper .skill__image, body .skills .section__wrapper .section__content .skill__wrapper .skill__image {
+.skills .section__wrapper .section__content .skill__wrapper .skill__image {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #989898;
-  background-image: url("https://via.placeholder.com/150");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-html .skills .section__wrapper .section__content .skill__wrapper .skill, body .skills .section__wrapper .section__content .skill__wrapper .skill {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+.skills .section__wrapper .section__content .skill__wrapper .skill__image i {
+  font-size: 48px;
+  color: #626262;
 }
 
-html .skills .section__wrapper .section__content .skill__wrapper .skill .skill__title, body .skills .section__wrapper .section__content .skill__wrapper .skill .skill__title {
+.skills .section__wrapper .section__content .skill__wrapper .skill {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skills .section__wrapper .section__content .skill__wrapper .skill .skill__title {
   padding-left: 25px;
 }
 
-html .skills .section__wrapper .section__content .skill__wrapper .skill .skill__title h3, body .skills .section__wrapper .section__content .skill__wrapper .skill .skill__title h3 {
+.skills .section__wrapper .section__content .skill__wrapper .skill .skill__title h3 {
   color: #000000;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -306,16 +333,254 @@ html .skills .section__wrapper .section__content .skill__wrapper .skill .skill__
   text-transform: uppercase;
 }
 
-html .skills .section__wrapper .section__content .skill__wrapper .skill .skill__description, body .skills .section__wrapper .section__content .skill__wrapper .skill .skill__description {
+.skills .section__wrapper .section__content .skill__wrapper .skill .skill__description {
   padding-left: 25px;
 }
 
-html .skills .section__wrapper .section__content .skill__wrapper .skill .skill__description p, body .skills .section__wrapper .section__content .skill__wrapper .skill .skill__description p {
+.skills .section__wrapper .section__content .skill__wrapper .skill .skill__description p {
   color: #626262;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 23px;
   letter-spacing: 0.3px;
+}
+
+.progress {
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #989898;
+  background-image: url("../img/progress_bg.jpg");
+}
+
+.progress .section__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 100px 100px 100px;
+}
+
+.progress .section__wrapper .progress__box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.progress .section__wrapper .progress__box .percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.progress .section__wrapper .progress__box .percent svg {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.progress .section__wrapper .progress__box .percent svg circle {
+  width: 110px;
+  height: 110px;
+  fill: none;
+  stroke-width: 1;
+  stroke: #000;
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  -webkit-transform: translate(5px, 5px);
+          transform: translate(5px, 5px);
+}
+
+.progress .section__wrapper .progress__box .percent svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #666666;
+}
+
+.progress .section__wrapper .progress__box .percent svg circle:nth-child(2) {
+  stroke: #FFFFFF;
+}
+
+.progress .section__wrapper .progress__box .percent .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.progress .section__wrapper .progress__box .percent .number h2 {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: "Oswald", sans-serif;
+  line-height: 125px;
+  letter-spacing: 0.3px;
+}
+
+.progress .section__wrapper .progress__box .percent .number h2 span {
+  font-size: 24px;
+}
+
+.progress .section__wrapper .progress__box .text {
+  color: #FFFFFF;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.progress .section__wrapper .progress__box .sub_text {
+  color: #626262;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.progress .section__wrapper .progress__box_1 .percent .circle__animation circle:nth-child(2) {
+  -webkit-animation: stroke_1 2s cubic-bezier(1, 0.2, 0.15, 1.25);
+          animation: stroke_1 2s cubic-bezier(1, 0.2, 0.15, 1.25);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes stroke_1 {
+  0% {
+    stroke-dashoffset: 350;
+  }
+  100% {
+    stroke-dashoffset: 53;
+  }
+}
+
+@keyframes stroke_1 {
+  0% {
+    stroke-dashoffset: 350;
+  }
+  100% {
+    stroke-dashoffset: 53;
+  }
+}
+
+.progress .section__wrapper .progress__box_2 .percent .circle__animation circle:nth-child(2) {
+  -webkit-animation: stroke_2 2s cubic-bezier(1, 0.2, 0.15, 1.25);
+          animation: stroke_2 2s cubic-bezier(1, 0.2, 0.15, 1.25);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes stroke_2 {
+  0% {
+    stroke-dashoffset: 350;
+  }
+  100% {
+    stroke-dashoffset: 70;
+  }
+}
+
+@keyframes stroke_2 {
+  0% {
+    stroke-dashoffset: 350;
+  }
+  100% {
+    stroke-dashoffset: 70;
+  }
+}
+
+.progress .section__wrapper .progress__box_3 .percent .circle__animation circle:nth-child(2) {
+  -webkit-animation: stroke_3 2s cubic-bezier(1, 0.2, 0.15, 1.25);
+          animation: stroke_3 2s cubic-bezier(1, 0.2, 0.15, 1.25);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes stroke_3 {
+  0% {
+    stroke-dashoffset: 350;
+  }
+  100% {
+    stroke-dashoffset: 70;
+  }
+}
+
+@keyframes stroke_3 {
+  0% {
+    stroke-dashoffset: 350;
+  }
+  100% {
+    stroke-dashoffset: 70;
+  }
+}
+
+.progress .section__wrapper .progress__box_4 .percent .circle__animation circle:nth-child(2) {
+  -webkit-animation: stroke_4 2s cubic-bezier(1, 0.2, 0.15, 1.25);
+          animation: stroke_4 2s cubic-bezier(1, 0.2, 0.15, 1.25);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes stroke_4 {
+  0% {
+    stroke-dashoffset: 350;
+  }
+  100% {
+    stroke-dashoffset: 123;
+  }
+}
+
+@keyframes stroke_4 {
+  0% {
+    stroke-dashoffset: 350;
+  }
+  100% {
+    stroke-dashoffset: 123;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
