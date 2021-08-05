@@ -8,7 +8,7 @@ $percentage-font: 'Oswald', sans-serif
 $main_text_color: #626262
 $secondary_text_color: #989898
 $tertiary_text_color: #CFCFCF
-$quaternary_text_color: #E5E5E5
+$quaternary_text_color: #E3E3E3
 $social_color: #F4F4F4
 $footer_color: #252525
 
@@ -408,9 +408,145 @@ section
                         100%
                             stroke-dashoffset: 123            
 // Section "PORTFOLIO"
+.portfolio
+    border: none
 
+    .section__wrapper
+        max-width: 100%
+
+        .section__content
+            width: 100%
+            display: grid
+            grid-template-columns: repeat(12, 1fr)
+            grid-template-rows: repeat(2, 1fr)
+
+            .portfolio__item
+                position: relative
+                min-height: 400px
+                overflow: hidden
+                cursor: pointer
+                
+                .portfolio__image
+                    position: absolute
+                    inset: 0
+                    background-position: center center
+                    background-repeat: no-repeat
+                    background-size: cover
+                    background-color: $secondary_text_color
+                    background-image: url('../img/header_bg.jpg')
+                    z-index: 1
+                    transition: all 0.3s ease-in-out
+
+                .item__inner
+                    z-index: 100
+                    position: absolute
+                    inset: 0
+                    background-color: rgba(0, 0, 0, 0.6)
+                    opacity: 0
+                    transition: all 0.3s ease-in-out
+                    padding-bottom: 50px
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-end
+                    align-items: center
+
+                    .item__title
+                        text-transform: uppercase
+                        margin: 0
+                        font-family: $main-font
+                        font-size: 13px
+                        font-weight: 400
+                        line-height: 14px
+                        letter-spacing: 4px
+                        color: $quaternary_text_color
+
+                    .item__description
+                        text-transform: uppercase
+                        margin: 0
+                        margin-top: 10px
+                        font-family: $main-font
+                        font-size: 11px
+                        font-weight: 400
+                        line-height: 23px
+                        letter-spacing: 3px
+                        color: $tertiary_text_color
+
+            .portfolio__item:hover
+                .portfolio__image
+                    transform: scale(1.15)
+
+                .item__inner
+                    opacity: 1
+
+            .item_1
+                grid-column: 1/4
+                grid-row: 1/2
+
+            .item_2
+                grid-column: 4/7
+                grid-row: 1/2
+
+            .item_3
+                grid-column: 7/10
+                grid-row: 1/2
+
+            .item_4
+                grid-column: 10/13
+                grid-row: 1/2
+
+            .item_5
+                grid-column: 1/4
+                grid-row: 2/3
+
+            .item_6
+                grid-column: 4/7
+                grid-row: 2/3
+
+            .item_7
+                grid-column: 7/10
+                grid-row: 2/3
+
+            .item_8
+                grid-column: 10/13
+                grid-row: 2/3
 // Section "QUOTE"
+.quote
+    padding-bottom: 100px
+
+    .section__wrapper
+        .quote__sign
+            font-size: 40px
+            color: $main_text_color
+
+        .qoute__content p
+            text-transform: uppercase
+            margin: 0
+            margin-top: 50px
+            font-family: $main-font
+            font-size: 13px
+            font-weight: 400
+            line-height: 20px
+            letter-spacing: 1px
+            color: $main_text_color
+
+        .quote__author p
+            text-transform: uppercase
+            margin: 0
+            margin-top: 10px
+            font-family: $main-font
+            font-size: 11px
+            font-weight: 600
+            line-height: 23px
+            letter-spacing: 2px
+            color: $main_text_color
 
 // Section "CONTACT"
+.contact
+    .section__wrapper
+        .section__content
+            width: 100%
+            
+            form
+                width: 100%
 
 // FOOTER
